@@ -1,0 +1,142 @@
+label,floor,l2_top1,l2_top3,cos_top1,cos_top3,winner_top1
+Dans le petit couloir vers la partie sud ambulatoire,E1,1.0,1.0,1.0,1.0,L2
+"Près de la chambre 102, chambre 103 et chambre 101",E1,1.0,1.0,1.0,1.0,L2
+Près de salon de chirurgie de la main,E1,1.0,1.0,1.0,1.0,L2
+Près des ascenseurs privés ,E1,1.0,1.0,1.0,1.0,L2
+Couloir à gauche des acenceurs privés,E2,1.0,1.0,1.0,1.0,L2
+Couloir coté Terrace RDC,E2,1.0,1.0,1.0,1.0,L2
+Couloir près d'ascenceur publique et salle d'épreuve d'effort et de stress,E2,1.0,1.0,1.0,1.0,L2
+"Couloir prés de réserve AIRVO chauffantes et chariots d'isolement, porte de STOCK et local électrique TD1A2",E2,1.0,1.0,1.0,1.0,L2
+"Couloir prés de salle 1 , 2 , d'ascenceurs privé et salle d'épreuve d'effort et de stress",E2,1.0,1.0,1.0,1.0,L2
+Couloir près des vestiaires stérilisation et livraison stérilisation et chambre de ménage,E2,1.0,1.0,1.0,1.0,L2
+"Couloir USCI vers les chambres U1 - U2, U3 et STOCK",E2,1.0,1.0,1.0,1.0,L2
+Couloir vers les soins intensifs e tréanimation et prés des vestiaires,E2,1.0,1.0,1.0,1.0,L2
+"Couloir vers USIC (unité de soin intensifs cardiaques), devant la porte",E2,1.0,1.0,1.0,1.0,L2
+Dans la chambre STOCK,E2,1.0,1.0,1.0,1.0,L2
+Dans la salle STOCK 2,E2,1.0,1.0,1.0,1.0,L2
+"Dans l'intersection des chambres 201 , 202, 212 et salle d'attente",E2,1.0,1.0,1.0,1.0,L2
+"Dans l'intersection des chambres 208, 207, 209 et 206",E2,1.0,1.0,1.0,1.0,L2
+"Dans l'intersection des chambres 211 , 207, 204 et Stock",E2,1.0,1.0,1.0,1.0,L2
+Dans prépa soins,E2,1.0,1.0,1.0,1.0,L2
+Entre vidoir et bureau anesthésiste,E2,1.0,1.0,1.0,1.0,L2
+"Intersection de salles S11 - S12 , toilettes, S9 et S10",E2,1.0,1.0,1.0,1.0,L2
+"Intersection des chambre U4, U5-U6 et chambre infrmiers USCI",E2,1.0,1.0,1.0,1.0,L2
+petit couloir près des ascenseurs privés et salle de soins,E2,1.0,1.0,1.0,1.0,L2
+petit couloir près des ascenseurs privés et salle de soins,E2,1.0,1.0,1.0,1.0,L2
+"Près de acceuil infimier, salle R1 et salle R2",E2,1.0,1.0,1.0,1.0,L2
+"Près de bureau d'acceuil, STOCK et lave bassin",E2,1.0,1.0,1.0,1.0,L2
+"Près de bureau infirmiers, chambre U5-U6, chambre U7-U8 et locale sale",E2,0.9,1.0,0.9,1.0,L2
+"Près de chambre 201, chambre 202, chambre 212 et salle d'attente",E2,1.0,1.0,1.0,1.0,L2
+"Près de chambre 204, chambre 203, chambre 211 et STOCK",E2,1.0,1.0,1.0,1.0,L2
+Près de chambre 210 et chambre 205,E2,1.0,1.0,1.0,1.0,L2
+"Près de chambre 213, chambre 224 et escalier",E2,1.0,1.0,1.0,1.0,L2
+"Près de chambre 215, chambre 214, chambre 223 et chambre 222",E2,1.0,1.0,1.0,1.0,L2
+Près de chambre 218 / 217 et 219,E2,1.0,1.0,1.0,1.0,L2
+Près de chambre 221 et chambre 216,E2,1.0,1.0,1.0,1.0,L2
+Prés de chambre R1 et R2,E2,1.0,1.0,0.9,1.0,L2
+Près de chambre R3 et R4,E2,1.0,1.0,1.0,1.0,L2
+"Près de chambre R5, R6 et escalier 2",E2,1.0,1.0,1.0,1.0,L2
+Près de chambre R7 et R8,E2,1.0,1.0,1.0,1.0,L2
+Près de chambre R7 et R8 et vidoir ,E2,1.0,1.0,1.0,1.0,L2
+Près de chambre U7-U8 et LOCAL SALE,E2,1.0,1.0,1.0,1.0,L2
+"Près de chamre 209, chambre 206, chambre 207 et chambre 208",E2,1.0,1.0,1.0,1.0,L2
+"Près de chamre 209, chambre 206, chambre 207 et chambre 208",E2,1.0,1.0,1.0,1.0,L2
+"Près de lachambre 218, chambre 219 et chambre 217",E2,1.0,1.0,1.0,1.0,L2
+"Près de la chambre R4, chambre R3 et acceuil infirmier ",E2,1.0,1.0,1.0,1.0,L2
+"Près de la chambre R4, chambre R3 et acceuil infirmier ",E2,1.0,1.0,1.0,1.0,L2
+"Près de la chambre R4, chambre R3 et acceuil infirmier ",E2,1.0,1.0,1.0,1.0,L2
+Près de la chambre S5 et S6 ,E2,1.0,1.0,1.0,1.0,L2
+"Près de la chambre S7 , S8 et surveillante",E2,1.0,1.0,1.0,1.0,L2
+Près de la chambre S9-S10 et chambre S11-S12,E2,1.0,1.0,1.0,1.0,L2
+"Près de la chambre U1-U2 , chambre U3 et STOCK ",E2,1.0,1.0,1.0,1.0,L2
+"Près de la chambre U1-U2 , chambre U3 et STOCK ",E2,1.0,1.0,1.0,1.0,L2
+"Près de la chambre U1-U2 , chambre U3 et STOCK ",E2,1.0,1.0,1.0,1.0,L2
+"Près de la chambre U1-U2 , chambre U3 et STOCK ",E2,1.0,1.0,1.0,1.0,L2
+"Près de la chambre U1-U2 , chambre U3 et STOCK ",E2,1.0,1.0,1.0,1.0,L2
+Près de la chmabre R5 et acceuil infirmier,E2,1.0,1.0,1.0,1.0,L2
+Près de la porte droite et chambre 202,E2,1.0,1.0,1.0,1.0,L2
+"Près de la porte gauche de couloir , chambre 213 et chambre 214",E2,1.0,1.0,1.0,1.0,L2
+Près de la salle de repos et bureau de responsable de réa et soins intensifs ,E2,1.0,1.0,1.0,1.0,L2
+Près de la salle S9-S10 et soins infirmiers,E2,1.0,1.0,1.0,1.0,L2
+"Près de l'escalier 3 , chambre S2 et chambre S3-S4",E2,1.0,1.0,1.0,1.0,L2
+"Près de l'escalier 3 , chambre S2 et chambre S3-S5",E2,1.0,1.0,1.0,1.0,L2
+"Près de l'escalier 3 , chambre S2 et chambre S3-S6",E2,0.9,1.0,0.9,1.0,L2
+"Près de l'escalier 3 , chambre S2 et chambre S3-S7",E2,0.6,0.9,0.6,0.9,L2
+"Près de l'escalier 3 , chambre S2 et chambre S3-S8",E2,0.2,1.0,0.1,1.0,L2
+"Près de l'escalier 3 , chambre S2 et chambre S3-S9",E2,0.6,1.0,0.6,1.0,L2
+"Près de l'office, salle de pause, salle de rangement et bureau de cadre de santé",E2,1.0,1.0,1.0,1.0,L2
+Près des ascenceurs (réservé personnel),E2,1.0,1.0,1.0,1.0,L2
+Couloir près des ascenceurs privés et toilettes,E3,1.0,1.0,1.0,1.0,L2
+Couloir près des ascenceurs publiques et bureau de recherche clinique,E3,1.0,1.0,1.0,1.0,L2
+Couloir près des ascenceurs publiques et bureau de recherche clinique,E3,1.0,1.0,1.0,1.0,L2
+"Petit couloir près des ascenseurs privés, local électrique TD1A3 et bureau de cadre de nuit",E3,1.0,1.0,1.0,1.0,L2
+Petit couloir près de terrace ,E3,1.0,1.0,1.0,1.0,L2
+"Près de chambre 304, chambre 303, chambre 301 et chambre 302",E3,1.0,1.0,1.0,1.0,L2
+"Près de chambre 308, chambre 309, chambre 307 et STOCK",E3,1.0,1.0,1.0,1.0,L2
+"Près de chambre 313, chambre 312, chambre 311 et chambre 310",E3,0.7,1.0,0.7,1.0,L2
+"Près de chambre 313, chambre 312, chambre 311 et chambre 311",E3,0.9,1.0,0.8,1.0,L2
+"Près de chambre 320,321 (UMC1,UMC2), chambre 323 (UMC3) et escalier de secours ",E3,1.0,1.0,1.0,1.0,L2
+"Près de chambre 328P-328F, local propre, chambre 329P-329F et chambre 351",E3,1.0,1.0,1.0,1.0,L2
+"Près de chambre 330P-330F, local sale, STOCK et chambre 350",E3,1.0,1.0,1.0,1.0,L2
+"Près de chambre 333, chambre 334, chambre 343 et chambre 344",E3,1.0,1.0,1.0,1.0,L2
+"Près de chambre 336, chambre 341 et chambre 335",E3,1.0,1.0,1.0,1.0,L2
+"Près de chambre 346, chambre 345 et soins infirmiers",E3,1.0,1.0,1.0,1.0,L2
+"Près de chambre 352, chambre 326P-326F et chambre 327P-327F",E3,1.0,1.0,1.0,1.0,L2
+"Près de chambre soins infirmiers , acceuil , stock et vidoir",E3,1.0,1.0,1.0,1.0,L2
+"Près de la chambre 318 , chambre 317 , chambre 316 et chambre 319",E3,1.0,1.0,1.0,1.0,L2
+Près de la chambre 349 et chambre 332,E3,1.0,1.0,1.0,1.0,L2
+"près de l'escalier 2 , chambre 348 et chambre 347",E3,1.0,1.0,1.0,1.0,L2
+"près de l'escalier 2 , chambre 348 et chambre 348",E3,1.0,1.0,1.0,1.0,L2
+"Près de l'escalier 3,chambre 338, chambre 339, chambre 337 et chamre 340",E3,1.0,1.0,1.0,1.0,L2
+"Près de l'office , salle de pause local et VDI",E3,1.0,1.0,1.0,1.0,L2
+"Près de l'office , salle de pause local et VDI",E3,1.0,1.0,1.0,1.0,L2
+"Près de l'office , salle de pause local et VDI",E3,1.0,1.0,1.0,1.0,L2
+"Près de l'office , salle de pause local et VDI",E3,1.0,1.0,1.0,1.0,L2
+"Près de salle de rangement, escalier, chambre 314 et chambre 315",E3,1.0,1.0,1.0,1.0,L2
+"Près de salle de rangement, escalier, chambre 314 et chambre 316",E3,1.0,1.0,1.0,1.0,L2
+"Près de soins infirmiers, UMC 4 - UMC 5 et UMC 6",E3,1.0,1.0,1.0,1.0,L2
+"Coté terrace RDC , près de la zone désaffectée interdite",E4,1.0,1.0,1.0,1.0,L2
+"Couloir près de HDJ salle3 , ascenceurs privées et bureau responsable de la medcine et de l'umc",E4,1.0,1.0,1.0,1.0,L2
+dans le stock local,E4,1.0,1.0,1.0,1.0,L2
+petit couloir vers HDJ,E4,1.0,1.0,1.0,1.0,L2
+"Près de chambre 434, chambre 443, chambre 444 et chambre 433",E4,1.0,1.0,1.0,1.0,L2
+"Près de chambre 446, chambre 445 et bureau des infirmiers",E4,1.0,1.0,1.0,1.0,L2
+"Près de chambre 447 STOCK , chambre 448 et  escalier 2",E4,1.0,1.0,1.0,1.0,L2
+"Près de HDJ salle 2 , ascenceurs privés et toilettes",E4,1.0,1.0,1.0,1.0,L2
+"Près de la chambre 441, chambre 438, chambre 439, chambre 440 et chambre 437",E4,0.9,1.0,0.9,1.0,L2
+"Près de la chambre 441, chambre 438, chambre 439, chambre 440 et chambre 438",E4,0.6,1.0,0.6,1.0,L2
+"Près de l'escalier 3, chambre 438, chambre 439, chambre 440 et chambre 437",E4,1.0,1.0,1.0,1.0,L2
+Près des ascenceurs publique et escalier 1,E4,1.0,1.0,1.0,1.0,L2
+"Près de UMC1, Bureau médical, chambre 432 et bureau des infirmiers",E4,1.0,1.0,1.0,1.0,L2
+"Près de UMC2 chambre 450, chambre 430P-430F (UMC 7 P - UMC 8 F),chambre 431P - 431F (UMC 5 P - UMC 6 F), chambre 450 (UMC2), LOCAL SALE",E4,1.0,1.0,1.0,1.0,L2
+"Près de UMC4 chambre 452,chambre 426P-426F (STOCK),chambre 427P-427F(salon des familles)",E4,1.0,1.0,1.0,1.0,L2
+"Près de UMC4 chambre 452,chambre 426P-426F (STOCK),chambre 427P-427F(salon des familles)",E4,1.0,1.0,1.0,1.0,L2
+"Près de UMC4 chambre 452,chambre 426P-426F (STOCK),chambre 427P-427F(salon des familles)",E4,1.0,1.0,1.0,1.0,L2
+"Près de UMC4 chambre 452,chambre 426P-426F (STOCK),chambre 427P-427F(salon des familles)",E4,1.0,1.0,1.0,1.0,L2
+Bureau des déshabilloirs,RDC,1.0,1.0,1.0,1.0,L2
+Couloir de la salle opératoire 9,RDC,1.0,1.0,1.0,1.0,L2
+Couloir des vestiaires,RDC,1.0,1.0,1.0,1.0,L2
+Couloir près de la salle 1 (coronarographie),RDC,1.0,1.0,1.0,1.0,L2
+Couloir SAS — partie salle de réveil (à côté des toilettes / stock),RDC,1.0,1.0,1.0,1.0,L2
+Dans la salle de réveil,RDC,1.0,1.0,1.0,1.0,L2
+Dans le stock général,RDC,1.0,1.0,1.0,1.0,L2
+Entre la salle opératoire 8 et la salle opératoire 10,RDC,1.0,1.0,1.0,1.0,L2
+"Intersection des salles CORO1, CORO2 et salle de réveil",RDC,1.0,1.0,1.0,1.0,L2
+Petit couloir avec les bureaux dans la salle d'attente,RDC,1.0,1.0,1.0,1.0,L2
+Petit couloir dans la salle d'attente,RDC,1.0,1.0,1.0,1.0,L2
+Petit couloir d'entrée de la salle d'attente (entre les deux portes),RDC,1.0,1.0,1.0,1.0,L2
+Petit couloir près de CORO3,RDC,0.9,1.0,0.9,1.0,L2
+Près de la salle CORO3,RDC,1.0,1.0,1.0,1.0,L2
+Près de la salle opératoire 1,RDC,1.0,1.0,1.0,1.0,L2
+Près de la salle opératoire 11,RDC,1.0,1.0,1.0,1.0,L2
+Près de la salle opératoire 12,RDC,1.0,1.0,1.0,1.0,L2
+Près de la salle opératoire 2,RDC,1.0,1.0,1.0,1.0,L2
+Près de la salle opératoire 3,RDC,1.0,1.0,1.0,1.0,L2
+Près de la salle opératoire 4 et du stock opératoire,RDC,1.0,1.0,1.0,1.0,L2
+Près de la salle opératoire 5,RDC,1.0,1.0,1.0,1.0,L2
+Près de la salle opératoire 6,RDC,1.0,1.0,1.0,1.0,L2
+Près de la salle opératoire 7,RDC,1.0,1.0,1.0,1.0,L2
+"Près de l'ascenseur, salle de réveil et stock général",RDC,1.0,1.0,1.0,1.0,L2
+Prés de salle opératoire 9,RDC,1.0,1.0,1.0,1.0,L2
+Près des douches / Déshabilloir dans la salle d'attente,RDC,0.9,1.0,0.9,1.0,L2
+salle d'attente,RDC,1.0,1.0,1.0,1.0,L2
