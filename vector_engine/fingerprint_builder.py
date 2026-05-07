@@ -27,32 +27,32 @@ try:
     conn = psycopg2.connect(**DB)
     cur  = conn.cursor()
     cur.execute("SELECT version();")
-    print(f"  ✅  Connected: {cur.fetchone()[0][:40]}...")
+    print(f"   Connected: {cur.fetchone()[0][:40]}...")
 except Exception as e:
-    print(f"  ❌  Could not connect: {e}")
+    print(f"   Could not connect: {e}")
     print("      Make sure docker-compose is running: docker-compose up -d")
     sys.exit(1)
 
-# ── enable extensions (safe to re-run) ────────────────────────────────────────
+# ── enable extensions 
 print("\n━━━ STEP 2 — Enabling extensions ━━━")
 cur.execute("CREATE EXTENSION IF NOT EXISTS vector;")
 #cur.execute("CREATE EXTENSION IF NOT EXISTS postgis;")
 conn.commit()
-print("  ✅  pgvector and postgis ready")
+print("  pgvector ready")
 
-# ── load anchor index ─────────────────────────────────────────────────────────
+# ── load anchor index ──
 print("\n━━━ STEP 3 — Loading anchor index ━━━")
 if not ANCHOR_INDEX_JSON.exists():
-    print(f"  ❌  Not found: {ANCHOR_INDEX_JSON}")
+    print(f"    Not found: {ANCHOR_INDEX_JSON}")
     print("      Run preprocessing first: python preprocessing/vector_preprocessing.py")
     sys.exit(1)
 with open(ANCHOR_INDEX_JSON) as f:
     anchor_index = json.load(f)
 VECTOR_DIM = len(anchor_index)
 anchor_index_str = json.dumps(anchor_index)
-print(f"  ✅  {VECTOR_DIM} anchors loaded")
+print(f"   {VECTOR_DIM} anchors loaded")
 
-# ── recreate tables cleanly ───────────────────────────────────────────────────
+# ── recreate tables cleanly ──
 print("\n━━━ STEP 4 — Creating tables ━━━")
 cur.execute("DROP TABLE IF EXISTS live_observations CASCADE;")
 cur.execute("DROP TABLE IF EXISTS fingerprint_map    CASCADE;")
@@ -97,17 +97,17 @@ CREATE TABLE live_observations (
 );
 """)
 conn.commit()
-print("  ✅  Tables created (reference_points, fingerprint_map, live_observations)")
+print("   Tables created (reference_points, fingerprint_map, live_observations)")
 
 # ── load CSV ──────────────────────────────────────────────────────────────────
 print("\n━━━ STEP 5 — Loading fingerprints.csv ━━━")
 if not FINGERPRINTS_CSV.exists():
-    print(f"  ❌  Not found: {FINGERPRINTS_CSV}")
+    print(f"    Not found: {FINGERPRINTS_CSV}")
     sys.exit(1)
 df = pd.read_csv(FINGERPRINTS_CSV)
-print(f"  ✅  {len(df)} fingerprints to insert")
+print(f"  {len(df)} fingerprints to insert")
 
-# ── insert ────────────────────────────────────────────────────────────────────
+# ── insert ───
 print("\n━━━ STEP 6 — Inserting into database ━━━")
 inserted = 0
 errors   = 0
@@ -152,7 +152,7 @@ for _, row in df.iterrows():
 
     conn.commit()
 
-# ── create HNSW index for fast similarity search ──────────────────────────────
+# ── create HNSW index for fast similarity search ─
 print("\n━━━ STEP 7 — Building HNSW index ━━━")
 print("  (this makes nearest-neighbour queries ~100x faster)")
 cur.execute("""
@@ -163,9 +163,9 @@ cur.execute("""
 """)
 cur.execute("CREATE INDEX fp_floor_idx ON fingerprint_map (floor);")
 conn.commit()
-print("  ✅  HNSW index built")
+print("  HNSW index built")
 
-# ── verify ────────────────────────────────────────────────────────────────────
+# ── verify ────
 print("\n━━━ STEP 8 — Verification ━━━")
 cur.execute("SELECT floor, COUNT(*) FROM fingerprint_map GROUP BY floor ORDER BY floor;")
 rows = cur.fetchall()
@@ -181,14 +181,12 @@ conn.close()
 
 print(f"""
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-✅  Database ready!
+  Database ready!
 
   Inserted  : {inserted}
   Errors    : {errors}
   Total in DB: {total}
   Vector dim : {VECTOR_DIM}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Next → python database/queries.py
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 """)

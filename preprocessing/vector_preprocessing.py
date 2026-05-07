@@ -204,5 +204,4 @@ print(f"""
     📄  {OUT_CSV}          ← fingerprint vectors (one row per location)
     📄  {OUT_INDEX}   ← anchor index (position → anchor ID)
 
-
 """)

@@ -2,12 +2,11 @@
 evaluation/accuracy.py
 ------------------------
 Systematically tests ALL fingerprints in the database and produces
-accuracy metrics you can show to Bertrand and the team.
-
+a comprehensive accuracy report.
 HOW IT WORKS:
   For each of the 141 fingerprints in the DB:
     1. Pull its vector, add realistic noise (±3 dBm)
-    2. Query the system — pretend it's a live tag scan
+    2. Query the system
     3. Check if the correct location appears in top-1 / top-3 / top-5
   Then report accuracy per floor + overall.
 
@@ -23,7 +22,7 @@ import pandas as pd
 from pathlib import Path
 from collections import defaultdict
 
-# ── config ────────────────────────────────────────────────────────────────────
+# ── config ──
 DB                = dict(host="localhost", port=5432, dbname="rtls",
                          user="rtls_user", password="rtls_password")
 ANCHOR_INDEX_JSON = Path("data/processed/anchor_index.json")
@@ -32,17 +31,17 @@ NOISE_STD         = 3.0    # dBm — realistic signal variation between scans
 TOP_K             = 5
 N_TRIALS          = 10     # repeat each fingerprint N times with different noise
 
-# ── load anchor index ─────────────────────────────────────────────────────────
+# ── load anchor index ───
 with open(ANCHOR_INDEX_JSON) as f:
     anchor_index = json.load(f)
 anchor_to_idx = {v: int(k) for k, v in anchor_index.items()}
 VECTOR_DIM    = len(anchor_index)
 
-# ── connect ───────────────────────────────────────────────────────────────────
+# ── connect ────────────
 conn = psycopg2.connect(**DB)
 cur  = conn.cursor()
 
-# ── fetch all fingerprints ────────────────────────────────────────────────────
+# ── fetch all fingerprints ───
 print("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
 print("  RTLS Vector DB — Accuracy Evaluation")
 print(f"  Noise level: ±{NOISE_STD} dBm | Trials per RP: {N_TRIALS}")
@@ -56,7 +55,7 @@ cur.execute("""
 fingerprints = cur.fetchall()
 print(f"  Testing {len(fingerprints)} fingerprints × {N_TRIALS} trials = {len(fingerprints)*N_TRIALS} queries...\n")
 
-# ── run evaluation ────────────────────────────────────────────────────────────
+# ── run evaluation ─────
 results_by_floor = defaultdict(lambda: {"top1": 0, "top3": 0, "top5": 0, "total": 0})
 all_results      = []
 
@@ -110,7 +109,7 @@ for fp_id, true_label, true_floor, embedding_str in fingerprints:
 cur.close()
 conn.close()
 
-# ── print per-floor summary ───────────────────────────────────────────────────
+# ── print per-floor summary ───────
 df_results = pd.DataFrame(all_results)
 
 print(f"  {'FLOOR':<6} {'FPs':>4}  {'TOP-1':>7}  {'TOP-3':>7}  {'TOP-5':>7}")
@@ -127,7 +126,7 @@ for floor in sorted(results_by_floor.keys()):
     floor_summary.append({"floor": floor, "n_fps": n_fps, "top1": top1, "top3": top3, "top5": top5})
     print(f"  {floor:<6} {n_fps:>4}  {top1:>6.1%}  {top3:>6.1%}  {top5:>6.1%}")
 
-# ── overall ───────────────────────────────────────────────────────────────────
+# ── overall ─────
 total_queries = len(fingerprints) * N_TRIALS
 overall_top1  = df_results["top1_rate"].mean()
 overall_top3  = df_results["top3_rate"].mean()
@@ -136,13 +135,13 @@ overall_top5  = df_results["top5_rate"].mean()
 print(f"  {'─────':<6} {'──':>4}  {'─────':>7}  {'─────':>7}  {'─────':>7}")
 print(f"  {'TOTAL':<6} {len(fingerprints):>4}  {overall_top1:>6.1%}  {overall_top3:>6.1%}  {overall_top5:>6.1%}")
 
-# ── worst performing locations ────────────────────────────────────────────────
+# ── worst performing locations ───────
 print(f"\n  ── Hardest locations (lowest top-1 accuracy) ──")
 worst = df_results.nsmallest(5, "top1_rate")[["floor","label","top1_rate","top3_rate"]]
 for _, r in worst.iterrows():
     print(f"  [{r['floor']}] {r['label'][:60]:<60}  top1={r['top1_rate']:.0%}  top3={r['top3_rate']:.0%}")
 
-# ── save detailed results ─────────────────────────────────────────────────────
+# ── save detailed results ───────
 out_path = Path("data/processed/evaluation_results.csv")
 df_results.to_csv(out_path, index=False)
 

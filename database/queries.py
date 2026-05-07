@@ -20,17 +20,13 @@ import numpy as np
 import psycopg2
 from pathlib import Path
 
-# ── config ────────────────────────────────────────────────────────────────────
+# ── config ──
 DB = dict(host="localhost", port=5432, dbname="rtls", user="rtls_user", password="rtls_password")
 
 ANCHOR_INDEX_JSON = Path("data/processed/anchor_index.json")
 RSSI_FLOOR        = -100   # value for anchors not seen
 TOP_K             = 5      # how many nearest neighbours to retrieve
 
-
-# ══════════════════════════════════════════════════════════════════════════════
-# CORE FUNCTION — call this from any script
-# ══════════════════════════════════════════════════════════════════════════════
 
 def build_query_vector(live_rssi: dict, anchor_to_idx: dict, vector_dim: int) -> np.ndarray:
     """
@@ -153,8 +149,8 @@ def query_location(live_rssi: dict, floor: str = None, top_k: int = TOP_K) -> li
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# STANDALONE TEST — runs when you execute: python database/queries.py
-# Uses a real row from your fingerprint_map as a fake "live" observation
+# STANDALONE TEST
+# Uses a real row from the fingerprint_map as a fake "live" observation
 # ══════════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
@@ -213,12 +209,10 @@ if __name__ == "__main__":
     print(f"""
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   Test result:
-    Top-1 correct : {'✅  YES' if top1_correct else '❌  NO  (expected in top results)'}
-    Top-3 correct : {'✅  YES' if top3_correct else '❌  NO'}
+    Top-1 correct : {'  YES' if top1_correct else '  NO  (expected in top results)'}
+    Top-3 correct : {' YES' if top3_correct else ' NO'}
 
   NOTE: This test added small random noise (±2 dBm) to simulate
   a real live scan. A perfect match with 0 noise always scores top-1.
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Next → python evaluation/accuracy.py
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 """)
